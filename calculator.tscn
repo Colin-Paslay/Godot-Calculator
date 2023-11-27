@@ -1,0 +1,184 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwxht2u1fkcy0"]
+
+[ext_resource type="Texture2D" uid="uid://du2v5bisl66jo" path="res://assets/Delete_btn.png" id="1_2aodl"]
+[ext_resource type="Texture2D" uid="uid://dgy2lkgq25irw" path="res://assets/Negate_btn.png" id="2_8p0wy"]
+[ext_resource type="Texture2D" uid="uid://dp6o7vmr4jmuw" path="res://assets/Equal_btn.png" id="3_3rjmr"]
+[ext_resource type="Texture2D" uid="uid://dj70i7olml5fm" path="res://assets/Division_btn.png" id="4_l31dn"]
+[ext_resource type="Texture2D" uid="uid://dc3l8idbhj18o" path="res://assets/Multiplication_btn.png" id="5_orhu0"]
+[ext_resource type="Texture2D" uid="uid://fkr3qj8g5oi7" path="res://assets/Subtraction_btn.png" id="6_6rikh"]
+[ext_resource type="Texture2D" uid="uid://dobtjiol4tdy7" path="res://assets/Addition_btn.png" id="7_io6lo"]
+
+[node name="Calculator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Screen" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 248.0
+
+[node name="Four" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 108.0
+offset_right = 43.0
+offset_bottom = 143.0
+text = "4"
+
+[node name="NumBox" type="Panel" parent="Screen"]
+custom_minimum_size = Vector2(120, 35)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 143.0
+offset_bottom = 43.0
+
+[node name="Delete" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 158.0
+offset_top = 8.0
+offset_right = 193.0
+offset_bottom = 43.0
+icon = ExtResource("1_2aodl")
+
+[node name="Negate" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 58.0
+offset_top = 208.0
+offset_right = 93.0
+offset_bottom = 243.0
+icon = ExtResource("2_8p0wy")
+
+[node name="Equal" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 108.0
+offset_top = 208.0
+offset_right = 143.0
+offset_bottom = 243.0
+icon = ExtResource("3_3rjmr")
+
+[node name="Divide" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 158.0
+offset_top = 208.0
+offset_right = 193.0
+offset_bottom = 243.0
+icon = ExtResource("4_l31dn")
+
+[node name="Multiply" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 158.0
+offset_top = 158.0
+offset_right = 193.0
+offset_bottom = 193.0
+icon = ExtResource("5_orhu0")
+
+[node name="Subtract" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 158.0
+offset_top = 108.0
+offset_right = 193.0
+offset_bottom = 143.0
+icon = ExtResource("6_6rikh")
+
+[node name="Add" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 158.0
+offset_top = 58.0
+offset_right = 193.0
+offset_bottom = 93.0
+icon = ExtResource("7_io6lo")
+
+[node name="Nine" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 108.0
+offset_top = 58.0
+offset_right = 143.0
+offset_bottom = 93.0
+text = "9"
+
+[node name="Eight" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 58.0
+offset_top = 58.0
+offset_right = 93.0
+offset_bottom = 93.0
+text = "8"
+
+[node name="Seven" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 58.0
+offset_right = 43.0
+offset_bottom = 93.0
+text = "7"
+
+[node name="Six" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 108.0
+offset_top = 108.0
+offset_right = 143.0
+offset_bottom = 143.0
+text = "6"
+
+[node name="Five" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 58.0
+offset_top = 108.0
+offset_right = 93.0
+offset_bottom = 143.0
+text = "5"
+
+[node name="Three" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 108.0
+offset_top = 158.0
+offset_right = 143.0
+offset_bottom = 193.0
+text = "3"
+
+[node name="Two" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 58.0
+offset_top = 158.0
+offset_right = 93.0
+offset_bottom = 193.0
+text = "2
+"
+
+[node name="One" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 158.0
+offset_right = 43.0
+offset_bottom = 193.0
+text = "1"
+
+[node name="Zero" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 208.0
+offset_right = 43.0
+offset_bottom = 243.0
+text = "0"
