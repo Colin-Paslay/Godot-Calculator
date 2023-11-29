@@ -35,3 +35,5 @@ func _on_negate_pressed():
 	NumBox.text += "-"
 func _on_delete_pressed():
 	NumBox.text = ""
+func _on_decimal_pressed():
+	NumBox.text += "."

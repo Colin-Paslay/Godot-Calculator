@@ -14,6 +14,7 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hv7r2")
@@ -22,13 +23,13 @@ script = ExtResource("1_hv7r2")
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 140.0
+offset_right = 184.0
 offset_bottom = 43.0
 
 [node name="Screen" type="Panel" parent="."]
 layout_mode = 0
 offset_right = 200.0
-offset_bottom = 248.0
+offset_bottom = 296.0
 
 [node name="0" type="Button" parent="Screen"]
 custom_minimum_size = Vector2(35, 35)
@@ -69,28 +70,28 @@ icon = ExtResource("4_l31dn")
 [node name="Delete" type="Button" parent="Screen"]
 custom_minimum_size = Vector2(35, 35)
 layout_mode = 2
-offset_left = 152.0
-offset_top = 8.0
-offset_right = 187.0
-offset_bottom = 43.0
+offset_left = 8.0
+offset_top = 248.0
+offset_right = 43.0
+offset_bottom = 283.0
 icon = ExtResource("1_2aodl")
 
 [node name="Negate" type="Button" parent="Screen"]
-custom_minimum_size = Vector2(35, 35)
-layout_mode = 2
-offset_left = 56.0
-offset_top = 200.0
-offset_right = 91.0
-offset_bottom = 235.0
-icon = ExtResource("2_8p0wy")
-
-[node name="Equal" type="Button" parent="Screen"]
 custom_minimum_size = Vector2(35, 35)
 layout_mode = 2
 offset_left = 104.0
 offset_top = 200.0
 offset_right = 139.0
 offset_bottom = 235.0
+icon = ExtResource("2_8p0wy")
+
+[node name="Equal" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+offset_left = 152.0
+offset_top = 248.0
+offset_right = 187.0
+offset_bottom = 283.0
 icon = ExtResource("3_3rjmr")
 
 [node name="Multiply" type="Button" parent="Screen"]
@@ -188,8 +189,31 @@ text = "1"
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 140.0
+offset_right = 184.0
 offset_bottom = 43.0
+
+[node name="Decimal" type="Button" parent="Screen"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 0
+offset_left = 56.0
+offset_top = 200.0
+offset_right = 91.0
+offset_bottom = 235.0
+text = "."
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 248.0
+offset_right = 144.0
+offset_bottom = 283.0
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_right = 88.0
+offset_bottom = 35.0
+text = "C.W.P."
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Screen/Add" to="." method="_on_add_pressed"]
 [connection signal="pressed" from="Screen/Divide" to="." method="_on_divide_pressed"]
@@ -198,3 +222,4 @@ offset_bottom = 43.0
 [connection signal="pressed" from="Screen/Equal" to="." method="_on_equal_pressed"]
 [connection signal="pressed" from="Screen/Multiply" to="." method="_on_multiply_pressed"]
 [connection signal="pressed" from="Screen/Subtract" to="." method="_on_subtract_pressed"]
+[connection signal="pressed" from="Screen/Decimal" to="." method="_on_decimal_pressed"]
