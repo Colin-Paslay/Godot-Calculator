@@ -9,8 +9,20 @@ func _number_buttons(button):
 	NumBox.text += button.name
 func _on_equal_pressed():
 	var result: float
-	
-	NumBox.text = result
+	var agggg = NumBox.text.split(" ", true, 0)
+	var number1: float = agggg[0].to_float()
+	var operator = agggg[1]
+	var number2: float = agggg[2].to_float()
+	match operator:
+		"+":
+			result = number1 + number2
+		"-":
+			result = number1 - number2
+		"/":
+			result = number1 / number2
+		"*":
+			result = number1 * number2
+	NumBox.text = str(result)
 func _on_add_pressed():
 	NumBox.text += " + "
 func _on_subtract_pressed():
@@ -20,6 +32,6 @@ func _on_multiply_pressed():
 func _on_divide_pressed():
 	NumBox.text += " / "
 func _on_negate_pressed():
-	pass # Replace with function body.
+	NumBox.text += "-"
 func _on_delete_pressed():
 	NumBox.text = ""
