@@ -9,7 +9,7 @@ func _number_buttons(button):
 	NumBox.text += button.name
 func _on_equal_pressed():
 	var result: float
-	var agggg = NumBox.text.split(" ", true, 0)
+	var agggg = NumBox.text.split(" ", false, 0)
 	var number1: float = agggg[0].to_float()
 	var operator = agggg[1]
 	var number2: float = agggg[2].to_float()
